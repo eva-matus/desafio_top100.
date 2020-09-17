@@ -58,4 +58,14 @@ peliculas=# \copy reparto (id_pelicula, actor) FROM '/home/eva/Escritorio/desafi
 COPY 1051
 
 
+SELECT * FROM reparto;
+
+  id  | id_pelicula |            actor            
+------+-------------+-----------------------------
+    1 |           1 | Tom Hanks
+    2 |           1 | Robin Wright Penn
+    3 |           1 | Gary Sinise
+    4 |           1 | Mykelti Williamson
+    5 |           1 | Sally Field
+:...
 
