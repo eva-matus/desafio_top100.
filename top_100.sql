@@ -108,4 +108,21 @@ peliculas=# SELECT * FROM peliculas INNER JOIN reparto ON id_pelicula = reparto.
 
 5. Listar los titulos de las películas donde actúe Harrison Ford.(0.5 puntos)
 
+peliculas=# SELECT pelicula FROM peliculas INNER JOIN reparto ON peliculas.id = reparto.id_pelicula WHERE reparto.actor = 'Harrison Ford';
+                   pelicula                    
+-----------------------------------------------
+ Star Wars. Episodio IV: Una nueva esperanza
+ Indiana Jones y la última cruzada
+ En busca del arca perdida
+ Star Wars. Episodio V: El imperio contraataca
+ Star Wars. Episodio VI: El retorno del Jedi
+ Blade Runner
+ Apocalypse Now
+ Indiana Jones y el templo maldito
+(8 rows)
+
+
+6. Listar los 10 directores mas populares, indicando su nombre y cuántas películas aparecen en el
+top 100.(1 puntos)
+
 
