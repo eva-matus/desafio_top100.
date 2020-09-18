@@ -152,3 +152,46 @@ peliculas=# SELECT COUNT(DISTINCT actor) FROM reparto;
 (1 row)
 
 
+8. Indicar las películas estrenadas entre los años 1990 y 1999 (ambos incluidos) ordenadas por
+título de manera ascendente.(1 punto)
+
+
+peliculas=# SELECT pelicula FROM peliculas WHERE año_estreno >= 1990 AND año_estreno <= 1999;
+
+                  pelicula                  
+--------------------------------------------
+ Forest Gump
+ Titanic
+ Cadena perpetua
+ Braveheart
+ La lista de Schindler
+ Toy Story
+ Eduardo Manostijeras
+ Salvar al soldado Ryan
+ American History X
+ El sexto sentido
+ Pulp Fiction
+ El silencio de los corderos
+ El club de la pelea
+ Parque Jurásico
+ Matrix
+ La milla verde
+ Seven
+ Terminator 2: el juicio final
+ Hombres de negro
+ El show de Truman
+ Toy Story 2
+ Pesadilla antes de navidad
+ Entrevista con el vampiro
+ El Padrino. Parte III
+ El profesional
+ American Beauty
+ Trainspotting
+ Star Wars. Episodio I: La amenaza fantasma
+ Mejor... imposible
+ Uno de los nuestros
+(30 rows)
+
+~
+(END)
+
