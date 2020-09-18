@@ -126,3 +126,29 @@ peliculas=# SELECT pelicula FROM peliculas INNER JOIN reparto ON peliculas.id = 
 top 100.(1 puntos)
 
 
+peliculas=# SELECT director, COUNT(*) AS numero FROM peliculas GROUP BY director ORDER BY numero DESC LIMIT 10;
+
+       director       | numero 
+----------------------+--------
+ Steven Spielberg     |      9
+ Francis Ford Coppola |      4
+ Peter Jackson        |      4
+ Quentin Tarantino    |      3
+ Martin Scorsese      |      3
+ Robert Zemeckis      |      3
+ James Cameron        |      3
+ Ridley Scott         |      3
+ George Lucas         |      3
+ Frank Darabont       |      2
+(10 rows)
+
+
+7. Indicar cuantos actores distintos hay (1 puntos)
+
+peliculas=# SELECT COUNT(DISTINCT actor) FROM reparto;
+ count 
+-------
+   831
+(1 row)
+
+
