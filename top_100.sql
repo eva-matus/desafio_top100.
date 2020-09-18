@@ -195,3 +195,47 @@ peliculas=# SELECT pelicula FROM peliculas WHERE año_estreno >= 1990 AND año_e
 ~
 (END)
 
+
+
+9. Listar el reparto de las películas lanzadas el año 2001 (1 punto)
+
+
+peliculas=# SELECT peliculas.pelicula, peliculas.año_estreno, reparto.actor FROM peliculas INNER JOIN reparto ON peliculas.id = reparto.id_pelicula WHERE peliculas.año_estreno = 2001;
+                     pelicula                     | año_estreno |       actor       
+--------------------------------------------------+-------------+-------------------
+ El Señor de los anillos: La comunidad del anillo |        2001 | Elijah Wood
+ El Señor de los anillos: La comunidad del anillo |        2001 | Ian McKellen
+ El Señor de los anillos: La comunidad del anillo |        2001 | Viggo Mortensen
+ El Señor de los anillos: La comunidad del anillo |        2001 | Sean Astin
+ El Señor de los anillos: La comunidad del anillo |        2001 | Sean Bean
+ El Señor de los anillos: La comunidad del anillo |        2001 | Cate Blanchett
+ El Señor de los anillos: La comunidad del anillo |        2001 | Hugo Weaving
+ El Señor de los anillos: La comunidad del anillo |        2001 | Liv Tyler
+ El Señor de los anillos: La comunidad del anillo |        2001 | Ian Holm
+ El Señor de los anillos: La comunidad del anillo |        2001 | Christopher Lee
+ El Señor de los anillos: La comunidad del anillo |        2001 | John Rhys-Davies
+ El Señor de los anillos: La comunidad del anillo |        2001 | Orlando Bloom
+ El Señor de los anillos: La comunidad del anillo |        2001 | Dominic Monaghan
+ El Señor de los anillos: La comunidad del anillo |        2001 | Billy Boyd
+ El Señor de los anillos: La comunidad del anillo |        2001 | Lawrence Makoare
+ El Señor de los anillos: La comunidad del anillo |        2001 | Craig Parker
+ El Señor de los anillos: La comunidad del anillo |        2001 | Marton Csokas
+ El Señor de los anillos: La comunidad del anillo |        2001 | Andy Serkis
+ Monstruos S.A.                                   |        2001 | Animada
+ El viaje de Chihiro                              |        2001 | Animada
+ Amélie                                           |        2001 | Audrey Tautou
+ Amélie                                           |        2001 | Mathieu Kassovitz
+ Amélie                                           |        2001 | Rufus
+ Amélie                                           |        2001 | Lorella Cravotta
+ Amélie                                           |        2001 | Serge Merlin
+ Amélie                                           |        2001 | Jamel Debbouze
+ Amélie                                           |        2001 | Claire Maurier
+ Amélie                                           |        2001 | Clotilde Mollet
+ Amélie                                           |        2001 | Isabelle Nanty
+ Amélie                                           |        2001 | Dominique Pinon
+ Amélie                                           |        2001 | Artus de Penguern
+ Amélie                                           |        2001 | Yolande Moreau
+ Amélie                                           |        2001 | Urbain Cancelier
+:..
+
+
