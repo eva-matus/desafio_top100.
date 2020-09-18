@@ -67,7 +67,45 @@ SELECT * FROM reparto;
     3 |           1 | Gary Sinise
     4 |           1 | Mykelti Williamson
     5 |           1 | Sally Field
-:...
+:y muchos mas...
 
+
+4. Listar todos los actores que aparecen en la película "Titanic", indicando el título de la película,
+año de estreno, director y todo el reparto. (0.5 puntos)
+
+peliculas=# SELECT * FROM peliculas WHERE peliculas.pelicula = 'Titanic';
+
+DIRECTOR DE PELICULA TITANIC Y AÑO DE ESTRENO:
+
+ id | pelicula | año_estreno |   director    
+----+----------+-------------+---------------
+  2 | Titanic  |        1997 | James Cameron
+(1 row)
+
+
+CONSULTA, DIRECTOR Y TODO EL REPARTO:
+
+peliculas=# SELECT * FROM peliculas INNER JOIN reparto ON id_pelicula = reparto.id_pelicula WHERE peliculas.pelicula = 'Titanic';
+
+
+ id | pelicula | año_estreno |   director    | id | pelicula_id |       actor       
+----+----------+-------------+---------------+----+-------------+-------------------
+  2 | Titanic  |        1997 | James Cameron | 17 |           2 | Leonardo DiCaprio
+  2 | Titanic  |        1997 | James Cameron | 18 |           2 | Kate Winslet
+  2 | Titanic  |        1997 | James Cameron | 19 |           2 | Billy Zane
+  2 | Titanic  |        1997 | James Cameron | 20 |           2 | Kathy Bates
+  2 | Titanic  |        1997 | James Cameron | 21 |           2 | Frances Fisher
+  2 | Titanic  |        1997 | James Cameron | 22 |           2 | Bernard Hill
+  2 | Titanic  |        1997 | James Cameron | 23 |           2 | Jonathan Hyde
+  2 | Titanic  |        1997 | James Cameron | 24 |           2 | Danny Nucci
+  2 | Titanic  |        1997 | James Cameron | 25 |           2 | David Warner
+  2 | Titanic  |        1997 | James Cameron | 26 |           2 | Bill Paxton
+  2 | Titanic  |        1997 | James Cameron | 27 |           2 | Gloria Stuart
+  2 | Titanic  |        1997 | James Cameron | 28 |           2 | Victor Garber
+  2 | Titanic  |        1997 | James Cameron | 29 |           2 | Suzy Amis
+(13 rows)
+
+
+5. Listar los titulos de las películas donde actúe Harrison Ford.(0.5 puntos)
 
 
