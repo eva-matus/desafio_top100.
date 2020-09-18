@@ -281,3 +281,9 @@ peliculas=# SELECT reparto.actor FROM reparto WHERE id_pelicula IN(SELECT id FRO
 ~
 ~
 (END)
+
+Para la realización de este desafío se deben descargar los siguientes archivos, que se ecuentran en
+plataforma en el archivo zip llamado Apoyo Desafío
+peliculas.csv
+reparto.csv
+:)
