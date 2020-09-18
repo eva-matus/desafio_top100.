@@ -239,3 +239,45 @@ peliculas=# SELECT peliculas.pelicula, peliculas.año_estreno, reparto.actor FRO
 :..
 
 
+
+10. Listar los actores de la película más nueva (1 punto)
+
+
+peliculas=# SELECT reparto.actor FROM reparto WHERE id_pelicula IN(SELECT id FROM peliculas ORDER BY año_estreno DESC LIMIT 1);
+
+        actor         
+----------------------
+ Christian Bale
+ Heath Ledger
+ Aaron Eckhart
+ Michael Caine
+ Gary Oldman
+ Maggie Gyllenhaal
+ Morgan Freeman
+ Eric Roberts
+ Cillian Murphy
+ Anthony Michael Hall
+ Michael Jai White
+ William Fichtner
+ Edison Chen
+ Monique Curnen
+ Chin Han
+ Nestor Carbonell
+ Ritchie Coster
+ Keith Szarabajka
+ Colin McFarlane
+ Melinda McGraw
+ Nathan Gamble
+ Michael Vieau
+(22 rows)
+
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
